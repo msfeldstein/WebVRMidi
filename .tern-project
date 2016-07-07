@@ -1,0 +1,17 @@
+{
+  "ecmaVersion": 6,
+  "libs": [
+    "browser"
+  ],
+  "loadEagerly": [
+  ],
+  "plugins": {
+    "lint": {},
+    "complete_strings": {
+      "maxLength": 15
+    },
+    "node": {},
+    "lint": {},
+    "threejs": {}
+  }
+}

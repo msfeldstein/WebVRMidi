@@ -704,9 +704,7 @@ THREE.OBJLoader.prototype = {
 			}
 
 			mesh.name = object.name;
-
 			container.add( mesh );
-
 		}
 
 		console.timeEnd( 'OBJLoader' );
