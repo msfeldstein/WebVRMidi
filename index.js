@@ -7,7 +7,6 @@ require('./OBJLoader')
 require('./utils')
 var GrabManager = require('./Grab')
 var Fader = require('./fader')(THREE)
-var Palette = require('./palette')
 var Shapes = require('./shapes')
 var TrackballControls = require('three-trackballcontrols')
 WEBVR = require('./WEBVR')
@@ -20,7 +19,7 @@ var controller1, controller2;
 var grabManager;
 
 var room;
-var USE_HMD = false;
+var USE_HMD = true;
 
 init();
 animate();
@@ -71,10 +70,12 @@ function init() {
   controller2 = controllers[1]
   grabManager.addController(controller1)
 
-  var palette = new Palette(controller1)
-
   var fader = new Fader({type: 'cc', note: 22})
   scene.add(fader)
+  fader.position.y = 1.5
+  fader.position.x = -1
+  fader.position.z = 1
+  fader.rotation.y = -90
 
   if (!USE_HMD) {
     controls = new TrackballControls(camera)

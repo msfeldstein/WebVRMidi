@@ -18,7 +18,7 @@ module.exports = function(THREE) {
                 }
             })
             // this.midi = new MIDI()
-            this.scale.set(0.1, 0.1, 0.1)
+            this.scale.set(0.01, 0.01, 0.01)
             var modelPath = 'assets/fader.obj'
 
             var mtlLoader = new THREE.MTLLoader()
